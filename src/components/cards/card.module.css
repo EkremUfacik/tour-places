@@ -1,0 +1,71 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px black;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 12.5rem;
+    height: 160%;
+    background: linear-gradient(45deg, purple, blue);
+    animation: animate 4s linear infinite;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background-color: black;
+    border-radius: 6px;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.card:hover .desc {
+    bottom: 0;
+}
+
+.imgDiv {
+    z-index: 10;
+}
+
+.imgDiv img {
+    width: 27rem;
+    height: 23rem;
+    border-radius: 10px;
+    transition: filter 1s;
+}
+
+.imgDiv:hover img {
+    filter: grayscale();
+}
+
+.desc {
+    background-color: rgba(0, 0, 0, 0.603);
+    padding: 1rem;
+    margin: 5px;
+    color: rgba(255, 255, 255, 0.922);
+    position: absolute;
+    bottom: -15rem;
+    transition: bottom 1s;
+    z-index: 10;
+    line-height: 1.2rem;
+}

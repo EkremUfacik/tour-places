@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(78, 45, 162);
+    text-transform: uppercase;
+    margin: 1.5rem;
+
+
+    font-family: 'Shadows Into Light', cursive;
+}
