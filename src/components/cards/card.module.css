@@ -50,6 +50,7 @@
 .imgDiv img {
     width: 27rem;
     height: 23rem;
+    object-fit: cover;
     border-radius: 10px;
     transition: filter 1s;
 }

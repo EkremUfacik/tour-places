@@ -10,8 +10,7 @@ function App() {
       <h1>Popular Tour Places</h1>
       <div className="container">
         {data.map((country) => {
-          const { id, title, desc, image } = country;
-          return <Card key={id} title={title} desc={desc} image={image} />;
+          return <Card key={country.id} {...country} />;
         })}
       </div>
     </>
